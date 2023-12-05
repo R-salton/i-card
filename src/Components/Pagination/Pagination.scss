@@ -1,0 +1,55 @@
+.pagination{
+    width: 100%;
+    margin: auto;
+    padding: 10px 0px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    .indicator{
+        p{
+            color: #00000087;
+        }
+    }
+
+    .controls{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+
+        .page-numbers{
+            display: flex;
+            flex-direction: row;
+            color: rgba(0, 0, 0, 0.65);
+            
+            button{
+            width: 25px;
+            height: 25px;
+            background-color: #fcfdfd;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            font-size: 14px;
+            margin-left: 10px;
+            color: var(--black-color);
+            }
+
+
+        }
+
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            color: var(--black-color);
+            background-color: #fcfdfd;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
