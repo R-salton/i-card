@@ -122,7 +122,7 @@ function RegisterModuleForm({handleOpen}) {
         <p className='cancel' onClick={handleOpen}>
           CANCEL
         </p>
-        <button className='submit_btn' type='submit'>
+        <button className='submit_btn' type='submit'> 
           REGISTER
         </button>
       </div>

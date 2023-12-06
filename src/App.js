@@ -8,6 +8,8 @@ import Register from './Pages/Register/Register';
 import SideNav from './Components/SideNav/SideNav';
 import Modules from './Pages/Courses/Display_Modules/Modules';
 import RegisterModule from './Pages/Courses/Register_Module/RegisterModuleForm';
+import WorkLoads from './Pages/Courses/WorkLoads/DisplayWorkLoads/WorkLoads';
+import CreateWorkLoad from './Pages/Courses/WorkLoads/EditWorkLoads/CreateWorkLoad';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/modules' element={<Modules />} />
+          <Route path='/workloads' element={<WorkLoads />} />
+          <Route path='/createworkload' element={<CreateWorkLoad />} />
           {/* <Route path='/modules/register' element={<RegisterModule />} className="module_register" /> */}
         </Routes>
       </div>

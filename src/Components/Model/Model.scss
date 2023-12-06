@@ -1,0 +1,39 @@
+.add_module{
+    padding: 0;
+
+    .add_module_button{
+        background-color: var(--primary-color);
+        border-radius: 5px;
+        color: #fff;
+        padding: 5px 5px;
+        font-size: .9rem;
+        width: 150px;
+
+       
+    }
+
+    .buttons{
+        display: flex;
+        column-gap: 43px;
+        font-size: .8rem;font-weight: 600;
+        padding: 20px 0px;
+        letter-spacing: 1.1px;
+
+        .cancel{
+            border: 1px solid var(--light-blue);
+            padding: 5px 55px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        .submit_btn{
+            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 5px 55px;
+            border-radius: 5px;
+        }
+        
+    }
+}

@@ -34,55 +34,20 @@ export const modulesData = [
 
 
  
-export const TABLE_ROWS = [
-  {
-    img: "https://docs.material-tailwind.com/img/logos/logo-spotify.svg",
-    name: "Spotify",
-    amount: "$2,500",
-    date: "Wed 3:00pm",
-    status: "paid",
-    account: "visa",
-    accountNumber: "1234",
-    expiry: "06/2026",
-  },
-  {
-    img: "https://docs.material-tailwind.com/img/logos/logo-amazon.svg",
-    name: "Amazon",
-    amount: "$5,000",
-    date: "Wed 1:00pm",
-    status: "paid",
-    account: "master-card",
-    accountNumber: "1234",
-    expiry: "06/2026",
-  },
-  {
-    img: "https://docs.material-tailwind.com/img/logos/logo-pinterest.svg",
-    name: "Pinterest",
-    amount: "$3,400",
-    date: "Mon 7:40pm",
-    status: "pending",
-    account: "master-card",
-    accountNumber: "1234",
-    expiry: "06/2026",
-  },
-  {
-    img: "https://docs.material-tailwind.com/img/logos/logo-google.svg",
-    name: "Google",
-    amount: "$1,000",
-    date: "Wed 5:00pm",
-    status: "paid",
-    account: "visa",
-    accountNumber: "1234",
-    expiry: "06/2026",
-  },
-  {
-    img: "https://docs.material-tailwind.com/img/logos/logo-netflix.svg",
-    name: "netflix",
-    amount: "$14,000",
-    date: "Wed 3:30am",
-    status: "cancelled",
-    account: "visa",
-    accountNumber: "1234",
-    expiry: "06/2026",
-  },
-];
+  export const workLoads = [
+    { id: 1, moduleCode: "CSC2022", moduleName: "Database Management System", department: "ICT", program: "Software Design", group: "Year1" },
+    { id: 2, moduleCode: "MTH101", moduleName: "Mathematics I", department: "Mathematics", program: "Applied Mathematics", group: "Year2" },
+    { id: 3, moduleCode: "PHY201", moduleName: "Physics II", department: "Physics", program: "Physics", group: "Year3" },
+    { id: 4, moduleCode: "ENG303", moduleName: "Technical Writing", department: "English", program: "Technical Communication", group: "Year4" },
+    { id: 5, moduleCode: "CSC404", moduleName: "Advanced Algorithms", department: "ICT", program: "Software Engineering", group: "Year2" },
+    { id: 6, moduleCode: "CHE201", moduleName: "Chemistry I", department: "Chemistry", program: "Chemical Engineering", group: "Year3" },
+    { id: 7, moduleCode: "BIO101", moduleName: "Biology Basics", department: "Biology", program: "Biomedical Science", group: "Year1" },
+    { id: 8, moduleCode: "BUS202", moduleName: "Management Principles", department: "Business", program: "Business Administration", group: "Year4" },
+    { id: 9, moduleCode: "CSC505", moduleName: "Machine Learning", department: "ICT", program: "Data Science", group: "Year2" },
+    { id: 10, moduleCode: "ENG101", moduleName: "Introduction to Literature", department: "English", program: "English Literature", group: "Year1" },
+    { id: 11, moduleCode: "PHY303", moduleName: "Quantum Mechanics", department: "Physics", program: "Physics", group: "Year3" },
+    { id: 12, moduleCode: "MKT404", moduleName: "Marketing Strategies", department: "Business", program: "Marketing", group: "Year4" },
+    { id: 13, moduleCode: "CSC606", moduleName: "Web Development", department: "ICT", program: "Computer Science", group: "Year2" },
+    { id: 14, moduleCode: "ENG202", moduleName: "Creative Writing", department: "English", program: "Creative Writing", group: "Year1" },
+  ];
+  

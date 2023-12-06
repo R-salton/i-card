@@ -101,9 +101,9 @@ const onPageChange = (page) => {
           </tr>
       )})
         }
-      </table>
+      </table> 
       
-      <Pagination ModulesPerPage={ModulesPerPage} totalPages={totalPages} handlePageChange={onPageChange} currentPage={currentPage} />
+      <Pagination itemsPerPage={ModulesPerPage} totalPages={totalPages} handlePageChange={onPageChange} currentPage={currentPage} />
     </div>
   )
 }

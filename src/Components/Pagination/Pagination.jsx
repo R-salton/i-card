@@ -3,7 +3,7 @@ import React from "react";
 import './Pagination.scss'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
-function Pagination({totalPages, modulesPerpage,currentPage,handlePageChange}) {
+function Pagination({totalPages, itemsPerpage,currentPage,handlePageChange}) {
 const pages = []
 
 // console.log(totalPages);

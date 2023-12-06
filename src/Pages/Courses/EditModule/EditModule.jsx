@@ -16,15 +16,12 @@ function EditModule({id}) {
 const [size, setSize] = useState(null);
  
   const handleOpen = (value) => setSize(value);
-
-  console.log(id);
-
   const moduleInfo = modulesData.find((module)=> module.id === id);
 
   console.log(moduleInfo);
   
     return (
-      <div className='add_module edit_module'>
+      <div className=' edit_module'>
         <button className='add_module_button edit_module_button' onClick={() => handleOpen("lg")} variant='gradient'>
         <i class="ri-edit-line icon"></i>
         </button>
@@ -33,7 +30,7 @@ const [size, setSize] = useState(null);
         <DialogBody style={{padding: '0'}}>
          <EditModuleForm handleOpen={handleOpen} moduleInfo={moduleInfo} id={id} />
         </DialogBody>
-       
+        
       </Dialog>
       </div>
   
