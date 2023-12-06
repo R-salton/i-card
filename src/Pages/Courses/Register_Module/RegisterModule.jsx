@@ -10,7 +10,7 @@ import {
   import RegisterModuleForm from './RegisterModuleForm';
   
 function RegisterModule() {
-
+ 
 const [size, setSize] = useState(null);
  
   const handleOpen = (value) => setSize(value);

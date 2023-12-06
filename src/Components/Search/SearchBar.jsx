@@ -5,8 +5,7 @@ import {FiSearch}  from 'react-icons/fi'
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 function SearchBar({onSearch,totalModules, modules}) { 
 
-  console.log(totalModules);
-
+ 
   const[SearchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (e) =>{
@@ -18,7 +17,7 @@ function SearchBar({onSearch,totalModules, modules}) {
     <h6>Modules <span>{totalModules}</span></h6>
     <div className='search-items'>
       <input type='text' placeholder='Search...'  onChange={handleSearch} />
-     
+      <i class="ri-search-line icon"></i>
     </div>
     </div>
     
