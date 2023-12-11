@@ -1,43 +1,43 @@
 import React, { useState } from 'react'
-import './EditModuleForm.scss';
+import './EditWorkloadForm.scss';
 import { GiBookshelf } from "react-icons/gi";
-import { modulesData } from '../../../Data';
+import { workLoads } from '../../../../Data';
 
-function EditModuleForm({handleOpen, moduleInfo,id}) {
+function EditWorkloadForm({handleOpen, workLoadfo,id}) {
 
-  const [formData, setFormData] = useState({
-    moduleTitle: moduleInfo.title,
-    moduleCode: moduleInfo.code,
-    moduleShort: moduleInfo.short,
-    teachingMode: moduleInfo.teachingMode,
-  });
+  // const [formData, setFormData] = useState({
+  //   moduleTitle: moduleInfo.title,
+  //   moduleCode: moduleInfo.code,
+  //   moduleShort: moduleInfo.short,
+  //   teachingMode: moduleInfo.teachingMode,
+  // });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
 
-    const selectedTeachingMode = formData.teachingMode;
-    console.log(formData);
+  //   const selectedTeachingMode = formData.teachingMode;
+  //   console.log(formData);
 
 
 
-    setFormData({
+  //   setFormData({
       
-        moduleTitle: '',
-        moduleCode: '',
-        moduleShort: '',
-        teachingMode: '',
+  //       moduleTitle: '',
+  //       moduleCode: '',
+  //       moduleShort: '',
+  //       teachingMode: '',
       
-    })
+  //   })
 
 
-  };
+  // };
 
   // Get Teaching modes from modules
   
@@ -47,8 +47,7 @@ function EditModuleForm({handleOpen, moduleInfo,id}) {
     return uniqueTeachingModes;
   }
   
-  const teachingModes = getTeachingModes(modulesData);
-
+  
   
 
   return (
@@ -66,17 +65,17 @@ function EditModuleForm({handleOpen, moduleInfo,id}) {
       <i class="ri-close-fill icon" onClick={handleOpen} ></i>
       </div>
       <div className='form_contents'>
-        <h5>Edit module</h5>
+        <h5>Edit Workload</h5>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit=''>
       <label htmlFor='moduleTitle'>Module title </label>
       <input
         type='text'
         name='moduleTitle' 
         id='moduleTitle'
         placeholder='Module title'
-        value={formData.moduleTitle}
-        onChange={handleChange}
+        value=''
+        onChange=''
       />
 
       <label htmlFor='moduleCode'>Module code </label>
@@ -85,8 +84,8 @@ function EditModuleForm({handleOpen, moduleInfo,id}) {
         name='moduleCode'
         id='moduleCode'
         placeholder='Code'
-        value={formData.moduleCode}
-        onChange={handleChange}
+        value=''
+        onChange=''
       />
 
       <label htmlFor='moduleShort'>Module Short title </label>
@@ -95,23 +94,18 @@ function EditModuleForm({handleOpen, moduleInfo,id}) {
         name='moduleShort'
         id='moduleShort'
         placeholder='Short'
-        value={formData.moduleShort}
-        onChange={handleChange}
+        value=''
+        onChange=''
       />
 
       <label htmlFor='teachingMode'>Teaching mode </label>
       <div className='select'>
         <select
           name='teachingMode'
-          value={formData.teachingMode}
-          onChange={handleChange}
+          value=''
+          onChange=''
         >
-        <option value=''>Teaching mode</option>
-        {
-          teachingModes.map((mode)=>{
-            return(<option value={mode}>{mode}</option>)
-          })
-        }
+       
           
           
         </select>
@@ -138,4 +132,4 @@ function EditModuleForm({handleOpen, moduleInfo,id}) {
   )
 }
 
-export default EditModuleForm
+export default EditWorkloadForm

@@ -9,7 +9,7 @@ import SideNav from './Components/SideNav/SideNav';
 import Modules from './Pages/Courses/Display_Modules/Modules';
 import RegisterModule from './Pages/Courses/Register_Module/RegisterModuleForm';
 import WorkLoads from './Pages/Courses/WorkLoads/DisplayWorkLoads/WorkLoads';
-import CreateWorkLoad from './Pages/Courses/WorkLoads/EditWorkLoads/CreateWorkLoad';
+import CreateWorkLoad from './Pages/Courses/WorkLoads/addWorkLoads/CreateWorkLoad';
 
 function App() {
   return (

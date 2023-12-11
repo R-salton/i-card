@@ -8,6 +8,7 @@ import RegisterModule from '../../Register_Module/RegisterModule';
 import EditModule from '../../EditModule/EditModule';
 import Model from '../../../../Components/Model/Model';
 import { Link } from 'react-router-dom';
+import EditWorkload from '../editWorkLoads/EditWorkload';
 
 const WorkLoads = () => {
 
@@ -104,7 +105,7 @@ const onPageChange = (page) => {
             <td>{workLoad.department}</td>
             <td>{workLoad.program}</td>
             <td>{workLoad.group}</td>
-            <td><EditModule id={module.id} /></td>
+            <td><EditWorkload id={module.id} / ></td>
 
           </tr>
       )})

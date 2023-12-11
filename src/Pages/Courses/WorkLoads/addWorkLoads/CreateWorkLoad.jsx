@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CreateWorkLoad.scss'
 import { input } from '@material-tailwind/react'
 import { Link } from 'react-router-dom'
 
 const CreateWorkLoad = () => {
+
+const [moduleSet, setModuleSet] = useState([{id: 1}]);
+
+// Add Module div
+const handleAddModule = () => {
+  setModuleSet([...moduleSet,{id: moduleSet.length + 1}]);
+
+};
+
+// Remove Module div
+
+const handleRemoveModule = (moduleId) => {
+  const updatedModules = moduleSet.filter((module) => module.id !== moduleId);
+  setModuleSet(updatedModules);
+};
+
   return (
     <div className='container_workload'>
       <h1>Create Work Load</h1>
@@ -42,7 +58,10 @@ const CreateWorkLoad = () => {
       </div> 
 
       </div>
-      <div className='bottom_inputs'>
+      {
+        moduleSet.map((module,index) =>{
+          return (
+            <div className='bottom_inputs' index={module.id}>
       <div className='inputs'>
 
       <label for='moduleTitle'>Module </label>
@@ -75,9 +94,22 @@ const CreateWorkLoad = () => {
       </select>
       </div>
       
-      <p className='add_btn'><i class="ri-add-fill"></i> Add Module</p>
-
+      
+      {index === moduleSet.length - 1 && (
+            <p className='add_btn' onClick={handleAddModule}>
+              <i className="ri-add-fill"></i> Add Module
+            </p>
+          )}
+          {index !== moduleSet.length - 1 && (
+            <button className='remove_btn ' onClick={() => handleRemoveModule(module.id)}>
+            <i class="ri-close-fill"></i>
+            </button>
+          )}
       </div>
+          )
+        })
+      }
+     
       <div className='action_buttons'>
       <Link to='/workloads'>
         <button className='cancel_btn'>CANCEL</button>
