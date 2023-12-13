@@ -24,6 +24,29 @@ body{
   box-size: border-box;
   margin: 0px;
   padding: 0px;
+
+}
+::-webkit-scrollbar {
+    width: 10px;
+    
+  }
+/* Track */
+::-webkit-scrollbar-track {
+    
+    border-radius: 9px;
+    width: 10px;
+   
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4a4a4a86; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray)
 }
 
 section{
