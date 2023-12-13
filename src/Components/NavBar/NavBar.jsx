@@ -1,7 +1,8 @@
 import React from 'react'
 import './Navbar.scss'
+import { Link } from 'react-router-dom'
 
-function NavBar() {
+function NavBar({user}) {
   return (
     <div className='container'>
         <div className='logo_content'>
@@ -13,19 +14,21 @@ function NavBar() {
         </div>
             <div className='nav_links'>
                 <ul>
-                    <li>
-                        Logout
-                    </li>
+                {
+                    user ? <li>Logout</li> : <Link to='/login'><li>Login</li></Link>
+                }
+                    
                     <li>
                         About
                     </li>
                     <li>
                         Help
                     </li>
-                    <span></span>
-                    <li className='user_name'>
-                        Hi HOD John!
-                    </li>
+                   
+
+                    {
+                        user ?  (<><span></span><li className='user_name'>Hi HOD John!</li></>): <></>
+                    }
                 </ul>
             </div>
     </div>
