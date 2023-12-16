@@ -11,7 +11,10 @@ import RegisterModule from './Pages/Courses/Register_Module/RegisterModuleForm';
 import WorkLoads from './Pages/Courses/WorkLoads/DisplayWorkLoads/WorkLoads';
 import CreateWorkLoad from './Pages/Courses/WorkLoads/addWorkLoads/CreateWorkLoad';
 import Home from './Pages/Home/Home';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import Lecturers from './Pages/Lecturers/Display_Lecturers/Lecturers';
+import Groups from './Pages/Students/Groups';
+import Attendance from './Pages/Attendance/Attendance';
 
 function App() {
 
@@ -21,6 +24,9 @@ function App() {
 
     setIsUserSalton(!isUserSalton);
   }
+
+ 
+
 
   return (
     <div className="main_wrapper">
@@ -48,6 +54,9 @@ function App() {
               <Route path='/modules' element={<Modules />} />
               <Route path='/workloads' element={<WorkLoads />} />
               <Route path='/createworkload' element={<CreateWorkLoad />} />
+              <Route path='/lecturers' element={<Lecturers />} />
+              <Route path='/students-groups' element={<Groups />} />
+              <Route path='/attendance' element={<Attendance />} />
             </>
             :<>
             <Route path='/register' element={<Register />} />

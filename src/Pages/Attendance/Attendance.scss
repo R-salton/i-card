@@ -1,0 +1,230 @@
+.attendance_contents{
+   font-family:Arial,sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+
+    ::-webkit-scrollbar{
+        width: 6px;
+    }
+
+    .top_items{
+        display: flex;
+        justify-content: space-between;
+
+        
+       
+        
+        h1{
+            font-weight: 600;
+            font-size: 1.2rem;
+
+        }
+        .top_filter{
+            display: flex;
+            gap: 10px;
+            width: 20%;
+
+            .filter_inputs{
+                width: 50%;
+                label{
+                    display: block;
+                    color: var(--gray);
+                    font-size: .8rem;
+                    width: 100%;
+                }
+                
+                .select {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+
+    
+                    select {
+                        
+                        width: 100%;
+                        font-size: .95rem;
+                        appearance: none;
+                        padding: 2px 5px;
+                        background-color: #e6e4e4;
+                        border: 1px solid var(--gray);
+                        border-radius: 5px;
+                        color: var(--gray);
+                        cursor: pointer;
+                        outline: none;
+    
+                        option{
+                            border-radius: 5px;
+                            color: var(--gray);
+                        }
+    
+                      }
+    
+                      .icon_container{
+                        width: 40px;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        right: 0;
+                        height: 100%;
+                        
+    
+                        i{
+                            font-size: 2rem;
+                            color: var(--primary-color);
+                            font-size: 1.5rem;
+                        }
+                    }
+                    
+                  }
+            }
+        }
+    }
+
+    .other_filters{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+
+    
+
+     .filter_inputs{
+                width: 30%;
+                label{
+                    display: block;
+                    color: var(--gray);
+                    font-size: .8rem;
+                    width: 100%;
+                }
+
+                input{
+                    font-size: .8rem;
+                }
+
+                  select {
+                        
+                        width: 100%;
+                        font-size: .8rem;
+                        appearance: none;
+                        padding: 5px 5px;
+                        background-color: #e4e6e4;
+                        border-radius: 5px;
+                        color: var(--gray);
+                        cursor: pointer;
+                        outline: none;
+    
+                        option{
+                            border-radius: 5px;
+                            color: var(--gray);
+                            font-size: .8rem;
+                        }
+                        }
+                
+                .select {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+
+    
+                    select {
+                        
+                        width: 100%;
+                        font-size: .84rem;
+                        appearance: none;
+                        padding: 3px 5px;
+                        background-color: #e6e4e4;
+                        border-radius: 5px;
+                        color: var(--gray);
+                        cursor: pointer;
+                        outline: none;
+    
+                        option{
+                            border-radius: 5px;
+                            color: var(--gray);
+                        }
+    
+                      }
+    
+                      .icon_container{
+                        width: 40px;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        right: 0;
+                        height: 100%;
+                        
+    
+                        i{
+                            font-size: 2rem;
+                            color: var(--primary-color);
+                            font-size: 1.5rem;
+                        }
+                    }
+                    
+                  }
+            }
+
+        .course{
+        width: 300px;
+        
+        .select{
+        border: 1px solid var(--gray);
+        border-radius: 5px;
+        }
+        }
+    }
+
+    .date_filters{
+
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+    margin-top: 10px;
+
+    p{
+        font-size: .9rem;
+        margin-top: 20px;
+        color: var(--gray);
+    }
+
+    .filter{
+
+        label{
+        display: block;
+        color: var(--black-color);
+        font-size: .8rem;
+        }
+
+        input{
+        padding: 3px 10px;
+        outline: none;
+        border: 1px solid var(--gray);
+        border-radius: 5px;
+        color: var(--gray);
+        font-size: .8rem;
+        }
+
+        input[type="date"]{
+            color: var(--gray);
+            font-size: .8rem;
+        }
+        input[type="time"]{
+            color: var(--gray);
+            font-size: .8rem;
+            outline: none;
+        }
+
+
+       
+
+
+    }
+
+    }
+}

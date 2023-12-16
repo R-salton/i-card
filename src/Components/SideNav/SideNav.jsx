@@ -3,7 +3,8 @@ import { PiUsersThreeThin, PiChalkboardTeacherThin  } from "react-icons/pi";
 import { GiBookshelf, GiTeacher } from "react-icons/gi";
 import { TbReport } from "react-icons/tb";
 import { BsPeople } from "react-icons/bs";
-function SideNav() {
+import { Link } from 'react-router-dom';
+function SideNav({isSticky}) {
 
   const [dispalyDropDown, setDropDown] = useState({
     reports: false,
@@ -31,7 +32,7 @@ function SideNav() {
     })
   }
   return (
-    <div className='side_navs'>
+    <div className={`side_navs ${isSticky ? 'sticky' :''}`}>
 
       {/* =====================| Profile |======================== */}
         <div className='profile'>
@@ -58,36 +59,37 @@ function SideNav() {
             <div className='nav_link' >
               <div className='top_title'>
 
-              <div className='name_icon' onClick={()=>{handleToggle('attendence')}}>
+              <Link to='/attendance' className='name_icon' onClick={()=>{handleToggle('attendence')}}>
               <PiChalkboardTeacherThin className='icon' />
               <h5>Attendance</h5>
+              </Link>
+              <i class="ri-arrow-right-line"></i>
               </div>
-              <i class="ri-arrow-down-s-line"></i>
-              </div>
-              <div className={dispalyDropDown.attendence ? 'drop_down' : 'hide_drop'}>
+              {/* <div className={dispalyDropDown.attendence ? 'drop_down' : 'hide_drop'}>
                 <p>Best Data</p>
                 <p>Set study period</p>
                 <p>Users & Roles</p>
-              </div>
+              </div> */}
             </div>
             <div className='nav_link' >
               <div className='top_title'>
 
-              <div className='name_icon' onClick={()=>handleToggle('studentGroups')}>
+              <Link to='/students-groups' className='name_icon' onClick={()=>handleToggle('studentGroups')}>
+             
               <GiTeacher className='icon' />
               <h5>Student groups</h5>
-              </div>
+              </Link>
               {
                 dispalyDropDown.studentGroups ? <i class="ri-arrow-up-s-line drop_icon"></i> : <i class="ri-arrow-down-s-line drop_icon"></i> 
               }
-              
+               
               </div>
 
-              <div className={dispalyDropDown.studentGroups ? 'drop_down' : 'hide_drop'}>
+              {/* <div className={dispalyDropDown.studentGroups ? 'drop_down' : 'hide_drop'}>
                 <p>Best Data</p>
                 <p>Set study period</p>
                 <p>Users & Roles</p>
-              </div>
+              </div> */}
             </div>
 
             <div className='nav_link' onClick={()=>handleToggle('lecturers')}>
@@ -95,15 +97,17 @@ function SideNav() {
 
               <div className='name_icon'>
                 <PiUsersThreeThin className='icon' />
-              <h5>Lecturers</h5>
+              <h5><Link to='/lecturers'>Lecturers</Link></h5>
               </div>
-              <i class="ri-arrow-down-s-line"></i>
+              {
+                dispalyDropDown.lecturers ? <i class="ri-arrow-up-s-line drop_icon"></i> : <i class="ri-arrow-down-s-line drop_icon"></i> 
+              }
               </div>
-              <div className={dispalyDropDown.lecturers ? 'drop_down' : 'hide_drop'}>
+              {/* <div className={dispalyDropDown.lecturers ? 'drop_down' : 'hide_drop'}>
                 <p>Best Data</p>
                 <p>Set study period</p>
                 <p>Users & Roles</p>
-              </div>
+              </div> */}
             </div>
 
             <div className='nav_link' onClick={()=>handleToggle('courses')}>
@@ -113,12 +117,14 @@ function SideNav() {
               <GiBookshelf className='icon' />
               <h5>Courses</h5>
               </div>
-              <i class="ri-arrow-down-s-line"></i>
+              {
+                dispalyDropDown.courses ? <i class="ri-arrow-up-s-line drop_icon"></i> : <i class="ri-arrow-down-s-line drop_icon"></i> 
+              }
               </div>
               <div className={dispalyDropDown.courses ? 'drop_down' : 'hide_drop'}>
-                <p>Best Data</p>
-                <p>Set study period</p>
-                <p>Users & Roles</p>
+               <Link to='/modules'>Modules</Link>
+               <Link to='/workloads'>Workloads</Link>
+               <Link to='/createworkload'>Create Workload</Link>
               </div>
             </div>
 
